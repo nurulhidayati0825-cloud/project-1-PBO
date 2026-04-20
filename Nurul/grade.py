@@ -31,3 +31,4 @@ uas = float(input("Masukkan nilai uas: "))
 
 nilai_akhir = hitung_nilai_akhir(tugas, uts, uas)
 kategori = tentukan_kategori(nilai_akhir)
+tampilkan_hasil(nama, nilai_akhir, kategori)
