@@ -9,7 +9,7 @@ def main():
     pemilik1 = Pemilik("Ayesha", "Crocodile-forget", "083030303030")
     hewan1 = Hewan("Choco", "Kingkong", 4, "Dislokasi Kaki")
     dokter1 = Dokter("Dr. Vanesa", "D016", "Primata", 150000)
-    ruang1 = Ruang("R05", "Ruang Primata", 1)
+    ruang1 = Ruang("R06", "Ruang Primata", 1)
 
     # 2. Relasi Pemilik dan Hewan
     pemilik1.tambah_hewan(hewan1)
