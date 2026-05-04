@@ -5,7 +5,7 @@ def hitung_nilai_akhir(tugas, uts, uas):
     
 # fungsi kategori nilai
 def tentukan_kategori(nilai):
-    if nilai >= 80:
+    if nilai >= 85:
         return "A"
     elif nilai >= 70:
         return "B"
