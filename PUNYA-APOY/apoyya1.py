@@ -1,44 +1,26 @@
-class Kendaraan:
-    # Constructor
-    def __init__(self, nama, warna):
-        self.nama = nama
-        self.warna = warna
+class Pemeriksaan:
+    def __init__(self, hewan, dokter, ruang=None, lama_inap=0):
+        self.hewan = hewan
+        self.dokter = dokter
+        self.ruang = ruang
+        self.lama_inap = lama_inap
 
-    # Method
-    def tampilkan_info(self):
-        print(f"Nama kendaraan : {self.nama}")
-        print(f"Warna          : {self.warna}")
+    def hitung_biaya(self):
+        biaya = self.dokter.tarif
+        if self.lama_inap > 0:
+            biaya += 200000 * self.lama_inap
+        return biaya
 
-    def jalan(self):
-        print(f"{self.nama} sedang berjalan.")
+    def tampilkan_detail(self):
+        print("=== Detail Pemeriksaan ===")
+        print("Hewan  :", self.hewan.nama)
+        print("Dokter :", self.dokter.nama)
 
+        if self.ruang:
+            print("Ruang  :", self.ruang.nama)
+            print("Lama Inap :", self.lama_inap, "hari")
+        else:
+            print("Tanpa Rawat Inap")
 
-# Pewarisan / Inheritance
-class Mobil(Kendaraan):
-    def __init__(self, nama, warna, jumlah_pintu):
-        super().__init__(nama, warna)
-        self.jumlah_pintu = jumlah_pintu
-
-    def tampilkan_info(self):
-        print("=== Data Mobil ===")
-        print(f"Nama kendaraan : {self.nama}")
-        print(f"Warna          : {self.warna}")
-        print(f"Jumlah pintu   : {self.jumlah_pintu}")
-
-    def klakson(self):
-        print(f"{self.nama} berbunyi: Tin tin!")
-
-
-# Membuat objek
-kendaraan1 = Kendaraan("Sepeda Motor", "Hitam")
-mobil1 = Mobil("Toyota Avanza", "Putih", 4)
-
-# Menjalankan method
-kendaraan1.tampilkan_info()
-kendaraan1.jalan()
-
-print()
-
-mobil1.tampilkan_info()
-mobil1.jalan()
-mobil1.klakson()
+        print("Total Biaya : Rp", self.hitung_biaya())
+        print()
