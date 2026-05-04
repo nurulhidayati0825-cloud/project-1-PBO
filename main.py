@@ -2,6 +2,7 @@ from pemilik import Pemilik
 from dokter import Dokter
 from ruang import Ruang
 from pemeriksaan import Pemeriksaan
+from hewan import Hewan
 
 def main():
     # 1. Inisialisasi Objek
@@ -15,18 +16,18 @@ def main():
 
     # 3. Testing Skenario 1: Pemeriksaan TANPA rawat inap
     print("\n[TEST SKENARIO 1: RAWAT JALAN]")
-    periksa1 = Layanan(hewan1, dokter1)
+    periksa1 = Pemeriksaan(hewan1, dokter1)
     periksa1.tampilkan_detail()
 
     # 4. Testing Skenario 2: Pemeriksaan DENGAN rawat inap
     print("\n[TEST SKENARIO 2: RAWAT INAP]")
-    periksa2 = Layanan(hewan1, dokter1, ruang1, 2)
+    periksa2 = Pemeriksaan(hewan1, dokter1, ruang1, 2)
     periksa2.tampilkan_detail()
 
     # 5. Menampilkan Data Master
     print("\n[DATA MASTER]")
     pemilik1.tampilkan_data()
-    hewan1.tampilkan_data()
+    hewan1.tampilkan_info()
     dokter1.tampilkan_data()
     ruang1.tampilkan_data()
 
