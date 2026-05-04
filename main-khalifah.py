@@ -6,10 +6,10 @@ from hewan import Hewan
 
 def main():
     # 1. Inisialisasi Objek
-    pemilik1 = Pemilik("Apoy", "Cawas", "08123456789")
-    hewan1 = Hewan("Rojak", "Anjing", 1, "Sakit")
-    dokter1 = Dokter("Dr. Mark", "D001", "Hewan Kecil", 100000)
-    ruang1 = Ruang("R01", "Ruang Anjing", 5)
+    pemilik1 = Pemilik("Aulia", "Surakarta", "082145678901")
+    hewan1 = Hewan("Mochi", "Kucing", 2, "Demam dan tidak nafsu makan")
+    dokter1 = Dokter("Dr. Salsabila", "D002", "Hewan Kecil", 120000)
+    ruang1 = Ruang("R02", "Ruang Kucing", 4)
 
     # 2. Relasi Pemilik dan Hewan
     pemilik1.tambah_hewan(hewan1)
@@ -21,7 +21,7 @@ def main():
 
     # 4. Testing Skenario 2: Pemeriksaan DENGAN rawat inap
     print("\n[TEST SKENARIO 2: RAWAT INAP]")
-    periksa2 = Pemeriksaan(hewan1, dokter1, ruang1, 2)
+    periksa2 = Pemeriksaan(hewan1, dokter1, ruang1, 3)
     periksa2.tampilkan_detail()
 
     # 5. Menampilkan Data Master
