@@ -1,4 +1,4 @@
-class Member:
+zclass Member:
     def __init__(self, nama, id_member, biaya_dasar):
         self.nama = nama
         self.id_member = id_member
